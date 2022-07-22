@@ -1,0 +1,145 @@
+:root {
+  --size: 200px;
+  --border-width: 5px;
+  --margin: 10px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  display: inline-block;
+  margin: var(--margin);
+  background-color: gray;
+  border: var(--border-width) solid black;
+  height: calc(var(--size) + var(--border-width) * 2);
+  position: relative;
+}
+
+.container--sm {
+  width: calc(var(--size) + var(--border-width) * 2);
+}
+
+.container--lg {
+  width: calc(var(--size) * 2 + var(--border-width) * 2);
+}
+
+.block {
+  width: 50%;
+  height: 50%;
+  position: absolute;
+}
+
+.block--1 {
+  background-color: green;
+  top: 0;
+  left: 0;
+}
+
+.block--2 {
+  background-color: white;
+  top: 0;
+  left: 50%;
+}
+
+.block--3 {
+  background-color: black;
+  top: 50%;
+  left: 0;
+}
+
+.block--4 {
+  background-color: rebeccapurple;
+  top: 50%;
+  left: 50%;
+}
+
+.block--5 {
+  background-color: blue;
+  left: 0;
+  bottom: 0;
+  transform: translate(-75%, 75%);
+  z-index: -1;
+}
+
+.block--6 {
+  background-color: blue;
+  left: 50%;
+  bottom: 0;
+  transform: translate(-100%, 75%);
+  z-index: 1;
+}
+
+.block--7 {
+  background-color: blue;
+  right: 0;
+  bottom: 0;
+  transform: translate(-20%, 75%);
+  z-index: -1;
+}
+
+.block-large {
+  position: absolute;
+  background-color: red;
+  top: var(--margin);
+  right: var(--margin);
+  bottom: var(--margin);
+  left: var(--margin);
+}
+
+.block--v2 {
+  width: 35%;
+}
+
+.navbar {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.menu {
+  padding: 0;
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+}
+
+.menu-item {
+  display: block;
+  height: 300px;
+  width: 300px;
+}
+
+.menu-item__container {
+  text-align: center;
+}
+
+.menu-item__title {
+  background-color: darkred;
+}
+
+.menu-item__link {
+  color: white;
+  height: 50px;
+  padding: 1em 2em;
+  display: block;
+  width: 95%;
+  animation: 0.5s;
+}
+
+.menu-item__image {
+  width: 75%;
+  padding: 20px;
+}
+
+.menu-item__container:hover {
+  outline: 1px solid black;
+}
+
+.menu-item__container:hover .menu-item__title {
+  background-color: yellow;
+}
+
+.menu-item__container:hover .menu-item__link {
+  color: black;
+}
